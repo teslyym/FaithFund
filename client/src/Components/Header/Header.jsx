@@ -6,23 +6,22 @@ import search from '../../assets/search.png'
 
 const Header = () => {
   return (
-   <>
-   <div className='section'>
-
-    <div className='sectiona'>
-        <a href=""> <img src= {logo} alt="" /></a>
-        <a href="">Home</a>
-        <a href="">Donate</a>
-        <a href="">Contact</a>
-        <a href=""> <img src= {search} alt="" /></a>
-        <hr />
-        <a href="">Register</a>
-        <a href="">Login</a>
+    <div id='header' className='sectiona flex items-center text-[#001712] px-[7vw] py-2 justify-between'>
+        <Link to={'/'}> <img src= {logo} className='w-[5vw]' alt="" /></Link>
+        <div className='flex items-center gap-6'>
+        <div className='flex gap-6'>
+        <Link to={'/'} href="">Home</Link>
+        <Link to={'About'} href="">About Us</Link>
+        <Link to={'/Donate'} href="">Donate</Link>
+        <Link to={'/Contact'} href="">Contact</Link>
+        <Link to={''} href=""> <img src= {search} alt="" /></Link>
+        </div>
+        <div className=' bg-[#CCE3DE] w-[1px] h-10'></div>
+        <Link to={'/register'} href="">Register</Link>
+        <Link to={'/Login'} href="" className='py-2 px-4 bg-[#017358] text-white rounded-lg'>Login</Link>
+        </div>
 
     </div>
-
-   </div>
-   </>
   )
 }
 
