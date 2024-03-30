@@ -5,6 +5,8 @@ import bgimg from "../../assets/bgimg.png";
 import { Link } from "react-router-dom";
 import sajdah from "../../assets/sajdah.png";
 import sajdahh from "../../assets/sajdahh.png"
+import Masajids from "../../Components/Footer/Masajids/Masajids";
+import MasajidsCard from "../../Components/Footer/Masajids/MasajidsCard";
 
 const Home = () => {
   return (
@@ -36,6 +38,7 @@ const Home = () => {
               <img src={sajdah} alt="" />
           </div>
         </div>
+        <MasajidsCard />
       </div>
 
       <Footer />
