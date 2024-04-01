@@ -76,10 +76,10 @@ const Home = () => {
         <div>
           <MasajidsCard />
         </div>
-        <div className="p-5 flex items-center w-[70%]">
+        <div className="p-5 py-3 items-center w-[70%]">
         <div className="items-center">
-          <div className="items-center flex w-[20vw] h-[10vh]">
-            <p>Nigerian Masajid need your help</p>
+          <div className="">
+            <p className="items-center justify-evenly">Nigerian Masajid need your help</p>
           </div>
           <div className="flex justify-center gap-2.5 font-normal text-sm text-white h-[25%]">
             <div className="">
@@ -108,6 +108,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+        </div>
+        <div className="w-[83vw] rounded opacity-50 px-7 py-3 justify-center font-bold text-8xl leading-8">
+          <h1 className="h-[50vh] items-center px-3 text-[#001712]">Empower Islam, Donate for Masajid.</h1>
+
         </div>
       </div>
 
