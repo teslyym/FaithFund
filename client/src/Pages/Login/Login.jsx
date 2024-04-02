@@ -113,20 +113,14 @@ const Login = () => {
             </div>
             <div className="flex justify-center">
               <button className="items-center text-[#FFFFFF] rounded-lg bg-[#017358] py-2 px-5 w-[126px]">
-                Get Started
+                Login
               </button>
             </div>
           </section>
           <div className="w-[22rem] mb-[10px] flex flex-col gap-8 text-base font-normal">
             <h1>
-              By continuing, you agree to the{" "}
-              <span className="text-[#017358]">
-                Terms of Service & Privacy Policy.
-              </span>
-            </h1>
-            <h1>
-              Already have an account,{" "}
-              <span className="text-[#017358]">Login</span>
+              Don’t have an account,{" "}
+              <span className="text-[#017358]"> Register here</span>
             </h1>
           </div>
         </div>
