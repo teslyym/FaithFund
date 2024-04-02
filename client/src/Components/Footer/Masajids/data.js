@@ -16,6 +16,36 @@ const data =[
         image:  "{masjid}",
         button: "button",
         id: "kjasjk23jk2kj3bnjkb3j"
+    },
+    {
+        title: "Ar-Rasheed Mosque, Yaba, Lagos",
+        image:  "{masjid}",
+        button: "button",
+        id: "kjasjk23jk2kj3bnjkb3j"
+    },
+    {
+        title: "Ar-Rasheed Mosque, Eko, Lagos",
+        image:  "{masjid}",
+        button: "button",
+        id: "kjasjk23jk2kj3bnjkb3j"
+    },
+    {
+        title: "Ar-Rasheed Mosque, Lekki, Lagos",
+        image:  "{masjid}",
+        button: "button",
+        id: "kjasjk23jk2kj3bnjkb3j"
+    },
+    {
+        title: "Ar-Rasheed Mosque, Yaba, Lagos",
+        image:  "{masjid}",
+        button: "button",
+        id: "kjasjk23jk2kj3bnjkb3j"
+    },
+    {
+        title: "Ar-Rasheed Mosque, Eko, Lagos",
+        image:  "{masjid}",
+        button: "button",
+        id: "kjasjk23jk2kj3bnjkb3j"
     }
 ]
 

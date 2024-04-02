@@ -7,7 +7,7 @@ const MasajidsCard = ({title='Ar-Rasheed Mosque, Yaba, Lagos', image={defImg}, i
     <div className=''>
     <img src={defImg} alt={title} />
     <p>{title}</p>
-    <Link to={`/mosque/${id}`} className='bg-[#017358] rounded '>Details</Link>
+    <Link to={`/mosque/${id}`} className='bg-[#017358] rounded text-center text-[#FFFFFF]'>Details</Link>
     
 </div>
   )
