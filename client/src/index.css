@@ -1,3 +1,8 @@
 @tailwind base;
+@layer base {
+  h3 {
+    @apply text-[2rem] font-medium;
+  }
+}
 @tailwind components;
 @tailwind utilities;

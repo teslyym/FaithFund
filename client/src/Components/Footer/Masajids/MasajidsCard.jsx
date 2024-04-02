@@ -1,12 +1,13 @@
 import React from 'react'
-import masjid from '../../../assets/masjid.png'
+import defImg from "../../../assets/masjid.png" 
+import { Link } from 'react-router-dom'
 
-const MasajidsCard = ({title, image, button}) => {
+const MasajidsCard = ({title='Ar-Rasheed Mosque, Yaba, Lagos', image={defImg}, id='72367'}) => {
   return (
-    <div className='w-[24px]'>
-    <img src={masjid} alt={title} />
-    <h3>{title}</h3>
-    <button className='bg-[#017358] rounded '>Donate</button>
+    <div className=''>
+    <img src={defImg} alt={title} />
+    <p>{title}</p>
+    <Link to={`/mosque/${id}`} className='bg-[#017358] rounded '>Details</Link>
     
 </div>
   )

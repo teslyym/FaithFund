@@ -1,19 +1,22 @@
-import MasajidsCard from "./MasajidsCard"
-import masjid from '../../../assets/masjid.png'
 const data =[
     {
         title: "Ar-Rasheed Mosque, Yaba, Lagos",
         image:  "{MasajidsCard}",
-        button: "button"
+        button: "button",
+        id: "72saf323d2q3wefqf"
     },
     {
         title: "Ar-Rasheed Mosque, Eko, Lagos",
         image:  "{masjid}",
-        button: "button"
+        button: "button",
+        id: "72ewrer3erw34f"
     },
     {
         title: "Ar-Rasheed Mosque, Lekki, Lagos",
         image:  "{masjid}",
-        button: "button"
+        button: "button",
+        id: "kjasjk23jk2kj3bnjkb3j"
     }
 ]
+
+export default data
