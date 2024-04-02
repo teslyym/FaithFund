@@ -68,6 +68,58 @@ const Register = () => {
             <h1 className="text-[14px]">OR</h1>
             <div className="border border-[#9DA39F] w-full"></div>
           </section>
+          <section className="w-[24rem] mb-[10px]">
+            <div className="bg-white w-full pl-4 outline-none">
+              <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
+                First Name
+              </h1>
+              <input
+                type="Enter First Name"
+                placeholder="Enter First Name"
+                className="flex border border-[#9DA39F] rounded-lg text-[#FFFFFF] px-2 py-3 items-center  w-full"
+              />
+            </div>
+            <div className="bg-white w-full pl-4 outline-none">
+              <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
+                Last Name
+              </h1>
+              <input
+                type="Enter First Name"
+                placeholder="Enter First Name"
+                className="flex border border-[#9DA39F] rounded-lg text-[#FFFFFF] px-2 py-3 items-center  w-full"
+              />
+            </div>
+            <div className="bg-white w-full pl-4 outline-none">
+              <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
+                Email Address
+              </h1>
+              <input
+                type="Enter First Name"
+                placeholder="Enter First Name"
+                className="flex border border-[#9DA39F] rounded-lg text-[#FFFFFF] px-2 py-3 items-center  w-full"
+              />
+            </div>
+            <div className="bg-white w-full pl-4 outline-none">
+              <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
+                Phone Number (include your country code)
+              </h1>
+              <input
+                type="Enter First Name"
+                placeholder="Enter First Name"
+                className="flex border border-[#9DA39F] rounded-lg text-[#FFFFFF] px-2 py-3 items-center  w-full"
+              />
+            </div>
+            <div className="bg-white w-full pl-4 outline-none">
+              <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
+                Password (minimum of 8 characters)
+              </h1>
+              <input
+                type="Enter First Name"
+                placeholder="Enter First Name"
+                className="flex border border-[#9DA39F] rounded-lg text-[#FFFFFF] px-2 py-3 items-center  w-full"
+              />
+            </div>
+          </section>
         </div>
       </div>
     </div>
