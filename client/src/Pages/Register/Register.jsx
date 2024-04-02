@@ -5,11 +5,11 @@ import logo from "../../Components/../assets/logo.png";
 import goo from "../../Components/../assets/goo.png";
 
 const Register = () => {
-  const [showPassword, setShowPassword] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
 
   const toggleShowPassword = () => {
-    setShowPassword(!showPassword)
-  }
+    setShowPassword(!showPassword);
+  };
   return (
     <div>
       <div>
@@ -74,52 +74,56 @@ const Register = () => {
             <div className="border border-[#9DA39F] w-full"></div>
           </section>
           <section className="w-[24rem] mb-[10px] flex flex-col gap-8">
-            <div className="bg-white w-full pl-4 outline-none">
+            <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 First Name
               </h1>
               <input
                 type="Enter First Name"
                 placeholder="Enter First Name"
-                className="flex border border-[#9DA39F] rounded-lg text-[#FFFFFF] px-2 py-3 items-center  w-full"
+                className="flex border border-[#9DA39F] rounded-lg  px-2 py-3 items-center  w-full"
               />
             </div>
-            <div className="bg-white w-full pl-4 outline-none">
+            <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 Last Name
               </h1>
               <input
-                type="Enter First Name"
-                placeholder="Enter First Name"
-                className="flex border border-[#9DA39F] rounded-lg text-[#FFFFFF] px-2 py-3 items-center  w-full"
+                type="Enter first Name"
+                placeholder="Enter Last Name"
+                className="flex border border-[#9DA39F] rounded-lg  px-2 py-3 items-center  w-full"
               />
             </div>
-            <div className="bg-white w-full pl-4 outline-none">
+            <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 Email Address
               </h1>
               <input
-                type="Enter First Name"
-                placeholder="Enter First Name"
-                className="flex border border-[#9DA39F] rounded-lg text-[#FFFFFF] px-2 py-3 items-center  w-full"
+                type="email"
+                placeholder="Enter Email Address"
+                className="flex border border-[#9DA39F] rounded-lg  px-2 py-3 items-center  w-full"
               />
             </div>
-            <div className="bg-white w-full pl-4 outline-none">
+            <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 Phone Number (include your country code)
               </h1>
               <input
-                type="Enter First Name"
-                placeholder="Enter First Name"
-                className="flex border border-[#9DA39F] rounded-lg text-[#FFFFFF] px-2 py-3 items-center  w-full"
+                type="phone number"
+                placeholder="Enter Phone Number"
+                className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center  w-full"
               />
             </div>
             <div className="bg-white w-full pl-4 outline-none">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 Password (minimum of 8 characters)
               </h1>
-              <div className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center  w-full justify-between focus-within:border-black">
-                <input className="w-full outline-none" type={showPassword?"text":"password"} placeholder="Enter Password" />
+              <div className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center  w-full justify-between focus-within:border-black valid:border-[#017358]">
+                <input
+                  className="w-full outline-none"
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter Password"
+                />
                 <svg
                   onClick={toggleShowPassword}
                   width="24"
@@ -138,7 +142,24 @@ const Register = () => {
                 (Use alphabets, numbers and characters)
               </p>
             </div>
+            <div className="flex justify-center">
+              <button className="items-center text-[#FFFFFF] rounded-lg bg-[#017358] py-2 px-5 w-[126px]">
+                Get Started
+              </button>
+            </div>
           </section>
+          <div className="w-[22rem] mb-[10px] flex flex-col gap-8 text-base font-normal">
+            <h1>
+              By continuing, you agree to the{" "}
+              <span className="text-[#017358]">
+                Terms of Service & Privacy Policy.
+              </span>
+            </h1>
+            <h1>
+              Already have an account,{" "}
+              <span className="text-[#017358]">Login</span>
+            </h1>
+          </div>
         </div>
       </div>
     </div>
