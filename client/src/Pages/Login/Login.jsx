@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import logo from "../../Components/../assets/logo.png";
-import goo from "../../Components/../assets/goo.png";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
