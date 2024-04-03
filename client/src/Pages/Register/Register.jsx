@@ -47,7 +47,7 @@ const Register = () => {
                   />
                 </svg>
 
-                <h1>Get Started with Google</h1>
+                <button>Get Started with Google</button>
               </div>
             </div>
             <div className="flex w-[249px] h-11">
@@ -64,7 +64,7 @@ const Register = () => {
                     fill="#001712"
                   />
                 </svg>
-                <h1>Get Started with Google</h1>
+                <button>Get Started with Apple</button>
               </div>
             </div>
           </div>
@@ -151,13 +151,18 @@ const Register = () => {
           <div className="w-[22rem] mb-[10px] flex flex-col gap-8 text-base font-normal">
             <h1>
               By continuing, you agree to the{" "}
-              <span className="text-[#017358]">
-                Terms of Service & Privacy Policy.
-              </span>
+              <button>
+                <span className="text-[#017358]">
+                  Terms of Service & Privacy Policy.
+                </span>
+              </button>
             </h1>
             <h1>
               Already have an account,{" "}
-              <span className="text-[#017358]">Login</span>
+              <span className="text-[#017358]">
+                {" "}
+                <button>Login</button>
+              </span>
             </h1>
           </div>
         </div>

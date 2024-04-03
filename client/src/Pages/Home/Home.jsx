@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import bgimg from "../../assets/bgimg.png";
@@ -10,6 +10,11 @@ import MasajidsCard from "../../Components/Footer/Masajids/MasajidsCard";
 import empower from "../../assets/empower.svg";
 
 const Home = () => {
+  useEffect(() => {
+    fetch("http://localhost:4000/countries")
+      .then((res) => res.json())
+      .then((res) => console.log(res));
+  }, []);
   return (
     <>
       <Header />
