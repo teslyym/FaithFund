@@ -1,17 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import logo from "../../Components/../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(email);
+    console.log(password);
+
+    fetch("http://localhost:4000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
+
+  // useEffect(() => {
+  //   fetch("http://localhost:5173")
+  //     .then((res) => res.json())
+  //     .then((res) => console.log(res));
+  // }, []);
+
   return (
     <div>
-      <div>
+      <form onSubmit={handleSubmit}>
         <div className="items-start">
           <img className="w-[94px] h-[80px] ml-[10%] mt-10" src={logo} alt="" />
         </div>
@@ -80,6 +109,8 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="Enter Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="flex border border-[#9DA39F] rounded-lg  px-2 py-3 items-center  w-full"
               />
             </div>
@@ -91,6 +122,8 @@ const Login = () => {
                 <input
                   className="w-full outline-none"
                   type={showPassword ? "text" : "password"}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter Password"
                 />
                 <svg
@@ -120,14 +153,14 @@ const Login = () => {
           <div className="w-[22rem] mb-[10px] flex flex-col gap-8 text-base font-normal">
             <h1>
               Don’t have an account,{" "}
-              <button>
+              <Link>
                 {" "}
                 <span className="text-[#017358]"> Register here</span>
-              </button>
+              </Link>
             </h1>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

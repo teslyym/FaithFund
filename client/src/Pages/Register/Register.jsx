@@ -10,6 +10,7 @@ const Register = () => {
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
   };
+
   return (
     <div>
       <div>
