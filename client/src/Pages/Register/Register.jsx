@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
+import Footer from "../../Components/Footer";
 import logo from "../../Components/../assets/logo.png";
 import goo from "../../Components/../assets/goo.png";
 

@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
 import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
+import Footer from "../../Components/Footer";
 import bgimg from "../../assets/bgimg.png";
 import { Link } from "react-router-dom";
 import sajdah from "../../assets/sajdah.png";
-import sajdahh from "../../assets/sajdahh.png";
-import Masajids from "../../Components/Footer/Masajids/Masajids";
-import MasajidsCard from "../../Components/Footer/Masajids/MasajidsCard";
+import Masajids from "../../Components/Masajids/Masajids";
 import empower from "../../assets/empower.svg";
 
 const Home = () => {

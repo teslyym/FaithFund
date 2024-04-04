@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
 import logo from "../../Components/../assets/logo.png";
 import { Link } from "react-router-dom";
 

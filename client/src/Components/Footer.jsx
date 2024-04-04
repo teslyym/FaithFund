@@ -1,8 +1,8 @@
 import React from "react";
-import twitter from "../../assets/twitter.png";
-import facebook from "../../assets/faceb.png";
-import insta from "../../assets/insta.png";
-import linked from "../../assets/linked.png";
+import twitter from "../assets/twitter.png";
+import facebook from "../assets/faceb.png";
+import insta from "../assets/insta.png";
+import linked from "../assets/linked.png";
 
 const Footer = () => {
   return (

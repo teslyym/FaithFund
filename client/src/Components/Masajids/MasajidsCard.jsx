@@ -1,5 +1,5 @@
 import React from 'react'
-import defImg from "../../../assets/masjid.png" 
+import defImg from "../../assets/masjid.png" 
 import { Link } from 'react-router-dom'
 
 const MasajidsCard = ({title='Ar-Rasheed Mosque, Yaba, Lagos', image={defImg}, id='72367'}) => {
