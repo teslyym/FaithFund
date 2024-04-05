@@ -18,7 +18,7 @@ const FaqComponent = ({
         </p>
       )}
       <div className="flex justify-end">
-        <p onClick={toggleShowQuestion}>
+        <p onClick={toggleShowQuestion} className="cursor-pointer">
           {showQuestion ? "Answer" : "Question"}
         </p>
       </div>

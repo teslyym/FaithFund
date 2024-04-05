@@ -53,8 +53,8 @@ const Contact = () => {
         </div>
       </div>
       <div className="w-[84%] mx-auto pb-8">
-        <h3 className="">Frequently Asked Questions</h3>
-        <div className="flex justify-center gap-16 w-[83%] mx-auto flex-wrap">
+        <h3 className="">Some of the frequently asked questions (FAQs)</h3>
+        <div className="flex justify-center pt-8 gap-16 w-[83%] mx-auto flex-wrap">
           {qa.map((qst, index) => (
             <FaqComponent
               key={index}
