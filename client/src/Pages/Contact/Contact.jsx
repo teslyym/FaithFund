@@ -52,16 +52,16 @@ const Contact = () => {
           </button>
         </div>
       </div>
-      <div className="w-[84%] mx-auto">
-        <h3 className="">
-          Frequently Asked Questions
-        </h3>
+      <div className="w-[84%] mx-auto pb-8">
+        <h3 className="">Frequently Asked Questions</h3>
         <div className="flex justify-center gap-16 w-[83%] mx-auto flex-wrap">
-        {
-          qa.map((qst, index) =>(         
-             <FaqComponent key={index} question={qst.question} answer={qst.answer} />
-          ))
-        }
+          {qa.map((qst, index) => (
+            <FaqComponent
+              key={index}
+              question={qst.question}
+              answer={qst.answer}
+            />
+          ))}
         </div>
       </div>
       <Footer />

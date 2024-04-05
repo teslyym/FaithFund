@@ -1,8 +1,10 @@
 const express = require('express');
 const cors = require('cors');
-
+const connectdb = require('./db');
+const dotenv = require("dotenv")
 const app = express();
 const port = 4000;
+const Users = require("./Models/userModel");
 
 const countries = [
     {
@@ -50,7 +52,8 @@ const countries = [
         code: 'ES'
     },
 ]
-
+dotenv.config();
+connectdb()
 const users = [
     {
         name: 'Johndoe',
@@ -79,6 +82,7 @@ const users = [
     }
 ]
     
+
 app.use(cors({
     origin: 'http://localhost:5173',
     credentials: true,
