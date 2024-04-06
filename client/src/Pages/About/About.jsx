@@ -5,10 +5,12 @@ import Footer from "../../Components/Footer";
 import msjwind from "../../Components/../assets/msjwind.png";
 
 const About = () => {
+
+  document.title = "About"
   return (
     <div>
       <Header />
-      <div className="pt-20 flex items-center justify-evenly pl-4 w-[87%] gap-2 h-[31%] py-3">
+      <div className="pt-20 flex items-center justify-evenly  w-[87%] mx-auto gap-4 h-[31%] py-3">
         <div className="w-[55%]">
           <h3 className="text-5xl font-semibold">About Ibni Masjid Lillah </h3>
           <h1 className="text-2xl font-medium leading-9 text-[#001712]">
@@ -21,7 +23,7 @@ const About = () => {
           </h1>
         </div>
         <div className="w-[43%]">
-          <img src={msjwind} alt="" />
+          <img src={msjwind} className=" w-full" alt="" />
         </div>
       </div>
 
