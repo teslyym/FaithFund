@@ -1,14 +1,19 @@
 import React from "react";
 import "./customButton.css";
 
-const CustomButtons = ({ icon, text }) => {
+const CustomButtons = ({ icon, text, button_width }) => {
   return (
-    <div class="button">
-      <div class="button-wrapper">
-        <div class="text">
+    <div
+      className={`button`}
+      style={{
+        width: button_width,
+      }}
+    >
+      <div className="button-wrapper">
+        <div className="text">
           {icon} {text}
         </div>
-        <span class="icon">
+        <span className="icon">
           {icon} {text}
         </span>
       </div>

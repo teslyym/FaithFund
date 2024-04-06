@@ -38,7 +38,7 @@ const Header = () => {
           Register
         </Link>
         <Link to={"/Login"}>
-          <CustomButtons text={"Login"} />
+          <CustomButtons text="Login" button_width={"100px"} />
         </Link>
       </div>
     </div>

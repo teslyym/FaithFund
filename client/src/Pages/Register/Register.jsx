@@ -3,7 +3,7 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer";
 import logo from "../../Components/../assets/logo.png";
 import goo from "../../Components/../assets/goo.png";
-import CustomButtons from "../../Components/buttons/CustomButtons";
+import CustomButtonTwo from "../../Components/buttons/CustomButtonTwo";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -25,7 +25,7 @@ const Register = () => {
           <div>
             <div className="flex w-[249px] h-11 mb-[24px]">
               <div className="items-center justify-center w-full">
-                <CustomButtons
+                <CustomButtonTwo
                   icon={
                     <svg
                       className="w-6 h-6"
@@ -56,8 +56,8 @@ const Register = () => {
               </div>
             </div>
             <div className="flex w-[249px] h-11">
-              <div className=" items-center justify-center w-full">
-                <CustomButtons
+              <div className="items-center justify-center w-full">
+                <CustomButtonTwo
                   icon={
                     <svg
                       width="24"

@@ -1,10 +1,6 @@
-.button {
-    --width: 100%;
-    --height: 40px;
-    --button-color: #017358;
-    border: 1px solid #017358;
-    ;
-    width: var(--width);
+.button--two {
+    --height: 35px;
+    --button-color: white;
     height: var(--height);
     background: var(--button-color);
     position: relative;
@@ -12,17 +8,18 @@
     border-radius: 0.45em;
     font-family: "Arial";
     transition: background 0.3s;
+    border: 1px solid #017358;
     cursor: pointer;
 }
 
-.button::before {
+.button--two::before {
     position: absolute;
     font-size: 0.9rem;
     color: #111;
     border-radius: .25em;
 }
 
-.button::after {
+.button--two::after {
     position: absolute;
     content: '';
     width: 0;
@@ -30,60 +27,60 @@
     border: 10px solid transparent;
 }
 
-.button::after,
-.button::before {
+.button--two::after,
+.button--two::before {
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s;
 }
 
-.text {
+
+.button--two
+.text--two {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.button-wrapper,
-.text,
-.icon {
+
+.button--two--wrapper,
+.text--two,
+.icon--two {
     overflow: hidden;
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
+    color: #017358;
+}
+
+.icon--two:hover{
     color: white;
 }
-
-.text {
+.text--two {
     top: 0
 }
-
-.text,
-.icon {
+.text--two,
+.icon--two {
     transition: top 0.5s;
 }
 
-.icon {
-    color: #fff;
+.icon--two {
+    color: #017358;
     top: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.button:hover {
-    background: whit;
-
+.button--two:hover {
+    background: #017358;
 }
 
-.icon:hover {
-    color: #017358;
-}
-
-.button:hover .text {
+.button--two:hover .text--two {
     top: -100%;
 }
 
-.button:hover .icon {
+.button--two:hover .icon--two {
     top: 0;
 }

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import sajdah from "../../assets/sajdah.png";
 import Masajids from "../../Components/Masajids/Masajids";
 import empower from "../../assets/empower.svg";
+import CustomButtons from "../../Components/buttons/CustomButtons";
 
 const Home = () => {
   useEffect(() => {
@@ -27,9 +28,8 @@ const Home = () => {
               The Prophet (PBUH) said: “Whoever builds a masjid for the sake of
               Allah, Allah will build for him a house in Paradise.”
             </h1>
-            <Link className="rounded px-2 py-3 border-inherit border-[1px] bg-[#017358] text-[white]">
-              {" "}
-              Donate
+            <Link>
+              <CustomButtons text={"Donate"} button_width={"93px"} />
             </Link>
           </div>
         </div>
