@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import search from "../../assets/search.png";
 import CustomButtons from "../buttons/CustomButtons";
-import CustomBut from "../buttons/CustomBut";
 
 const Header = () => {
   return (
