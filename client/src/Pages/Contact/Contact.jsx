@@ -3,6 +3,8 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer";
 import FaqComponent from "../../Components/FaqComponent";
 import { qa } from "../../data";
+import { Link } from "react-router-dom";
+import CustomButtons from "../../Components/buttons/CustomButtons";
 
 const Contact = () => {
   return (
@@ -46,10 +48,10 @@ const Contact = () => {
             />
           </div>
         </div>
-        <div className="flex justify-center">
-          <button className="items-center text-[#FFFFFF] pt-3 mb-8 rounded-lg bg-[#017358] py-2 px-5 w-[126px]">
-            Done
-          </button>
+        <div className="flex justify-center pb-[5%]">
+          <Link>
+            <CustomButtons text={"Done"} button_width={"126px"} />
+          </Link>
         </div>
       </div>
       <div className="w-[84%] mx-auto pb-8">

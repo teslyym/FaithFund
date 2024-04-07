@@ -11,6 +11,11 @@ import graduation from "../../Components/../assets/graduation.png";
 import shake from "../../Components/../assets/shake.png";
 import scale from "../../Components/../assets/Scales.png";
 import pray from "../../Components/../assets/Pray.png";
+import presi from "../../Components/../assets/presi.png";
+import vicepre from "../../Components/../assets/vicepre.png";
+import boarda from "../../Components/../assets/boarda.png";
+import boardb from "../../Components/../assets/boardb.png";
+import boardc from "../../Components/../assets/boardc.png";
 
 const About = () => {
   document.title = "About";
@@ -142,6 +147,56 @@ const About = () => {
             <h2 className="w-[279px] h-[125px] text-base font-normal">
               We express gratitude to our donors, partners, and supporters who
               play a vital role in making our mission possible.
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div className=" pb-[5%]">
+        <h3 className="pl-[7%]">Meet Our Members</h3>
+        <div className="flex justify-center pt-8 gap-16 w-[83%] mx-auto flex-wrap">
+          <div className="flex flex-col w-[300px] h-[390px] items-center justify-center">
+            <img src={presi} alt="" />
+            <h1 className="text-2xl font-medium text-[#001712]">
+              Abdul Mumeen Abdullah
+            </h1>
+            <h2 className="text-base font-medium text-[#9DA39F]">
+              President and Founder
+            </h2>
+          </div>
+          <div className="flex flex-col w-[300px] h-[390px] items-center justify-center">
+            <img src={vicepre} alt="" />
+            <h1 className="text-2xl font-medium text-[#001712]">
+              Umar Hussein
+            </h1>
+            <h2 className="text-base font-medium text-[#9DA39F]">
+              Vice President
+            </h2>
+          </div>
+          <div className="flex flex-col w-[300px] h-[390px] items-center justify-center">
+            <img src={boarda} alt="" />
+            <h1 className="text-2xl font-medium text-[#001712]">
+              Muhammad Khadeejah
+            </h1>
+            <h2 className="text-base font-medium text-[#9DA39F]">
+              Board Member
+            </h2>
+          </div>
+          <div className="flex flex-col w-[300px] h-[390px] items-center justify-center">
+            <img src={boardb} alt="" />
+            <h1 className="text-2xl font-medium text-[#001712]">
+              Bolaji Fatiah
+            </h1>
+            <h2 className="text-base font-medium text-[#9DA39F]">
+              Board Member
+            </h2>
+          </div>
+          <div className="flex flex-col w-[300px] h-[390px] items-center justify-center">
+            <img src={boardc} alt="" />
+            <h1 className="text-2xl font-medium text-[#001712]">
+              Galadinma Yaseer
+            </h1>
+            <h2 className="text-base font-medium text-[#9DA39F]">
+              Board Member
             </h2>
           </div>
         </div>
