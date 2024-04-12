@@ -7,6 +7,7 @@ import Donate from "./Pages/Donate/Donate";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import PaymentInfo from "./Components/PaymentInfo";
+import Otp from "./Components/Otp";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
           <Route path="Donate" element={<Donate />} />
           <Route path="Login" element={<Login />} />
           <Route path="Register" element={<Register />} />
-          <Route path="PaymentInfo" element={<PaymentInfo />} />
+          <Route path="payment-info" element={<PaymentInfo />} />
+          <Route path="Otp" element={<Otp />} />
         </Routes>
       </BrowserRouter>
     </>
