@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import CustomButtons from "../../Components/buttons/CustomButtons";
 import PaymentInfo from "../../Components/PaymentInfo";
 import Otp from "../../Components/Otp";
+import Confirmation from "../../Components/Confirmation";
+import SuccessfulPayment from "../../Components/SuccessfulPayment";
 
 const Donate = () => {
   const [donationSteps, setDonationSteps] = useState("donate");
@@ -84,9 +86,12 @@ const Donate = () => {
       );
     case "payment":
       return <PaymentInfo setDonationSteps={setDonationSteps} />;
-
     case "otp":
-      return <Otp />;
+      return <Otp setDonationSteps={setDonationSteps} />;
+    case "confirmation":
+      return <Confirmation setDonationSteps={setDonationSteps} />;
+    case "success-payment":
+      return <SuccessfulPayment />;
     default:
       break;
   }

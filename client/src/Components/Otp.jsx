@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CustomButtons from "./buttons/CustomButtons";
 
-const Otp = () => {
+const Otp = ({ setDonationSteps }) => {
   return (
     <div>
       <div className="w-full h-screen flex flex-col justify-center pt-5 pr-6 pb-5 pl-6 top-[220px] items-center flex-wrap">
@@ -38,7 +38,11 @@ const Otp = () => {
           </div>
         </div>
         <Link className="pt-6">
-          <CustomButtons text={"Done"} button_width={"79px"} />
+          <CustomButtons
+            handleClick={() => setDonationSteps("confirmation")}
+            text={"Done"}
+            button_width={"79px"}
+          />
         </Link>
       </div>
     </div>

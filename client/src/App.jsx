@@ -8,6 +8,8 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import PaymentInfo from "./Components/PaymentInfo";
 import Otp from "./Components/Otp";
+import Confirmation from "./Components/Confirmation";
+import SuccessfulPayment from "./Components/SuccessfulPayment";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="Register" element={<Register />} />
           <Route path="payment-info" element={<PaymentInfo />} />
           <Route path="Otp" element={<Otp />} />
+          <Route path="Confirmation" element={<Confirmation />} />
+          <Route path="SuccessfulPayment" element={<SuccessfulPayment />} />
         </Routes>
       </BrowserRouter>
     </>

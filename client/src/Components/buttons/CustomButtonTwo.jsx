@@ -1,9 +1,15 @@
 import React from "react";
 import "./customButtonTwo.css";
 
-const CustomButtonTwo = ({ icon, text }) => {
+const CustomButtonTwo = ({ icon, text, button_width, handleClick }) => {
   return (
-    <div class="button--two">
+    <div
+      style={{
+        width: button_width,
+      }}
+      class="button--two"
+      onClick={handleClick}
+    >
       <div class="button--two--wrapper">
         <div class="text--two">
           {icon} {text}
