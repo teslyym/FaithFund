@@ -28,7 +28,7 @@ const Home = () => {
               The Prophet (PBUH) said: “Whoever builds a masjid for the sake of
               Allah, Allah will build for him a house in Paradise.”
             </h1>
-            <Link>
+            <Link to={"/donate"}>
               <CustomButtons text={"Donate"} button_width={"93px"} />
             </Link>
           </div>

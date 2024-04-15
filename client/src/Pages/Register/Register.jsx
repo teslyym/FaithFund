@@ -17,7 +17,13 @@ const Register = () => {
     <div>
       <div>
         <div className="items-start">
-          <img className="w-[94px] h-[80px] ml-[10%] mt-10" src={logo} alt="" />
+          <Link to={"/"}>
+            <img
+              className="w-[94px] h-[80px] ml-[10%] mt-10"
+              src={logo}
+              alt=""
+            />
+          </Link>
         </div>
         <div className="rounded-lg flex flex-col border w-[32%] mx-auto mb-10 items-center gap-6 shadow-[2px_2px_10px_2px_rgba(0,0,0,0.2)]">
           <div className="text-[2.125rem] w-full  text-center font-medium pt-4">
@@ -167,7 +173,7 @@ const Register = () => {
               </p>
             </div>
             <div className="flex justify-center">
-              <Link>
+              <Link to={"login"}>
                 <CustomButtons text={"Get Started"} button_width={"126px"} />
               </Link>
             </div>
