@@ -128,6 +128,16 @@ const Register = () => {
                 className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center  w-full"
               />
             </div>
+            <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
+              <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
+                Home Address (include your postal code)
+              </h1>
+              <input
+                type="text"
+                placeholder="Enter Home Address (include your postal code)"
+                className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center  w-full"
+              />
+            </div>
             <div className="bg-white w-full pl-4 outline-none">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 Password (minimum of 8 characters)

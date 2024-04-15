@@ -13,7 +13,7 @@ const Login = () => {
     console.log(email);
     console.log(password);
 
-    fetch("http://localhost:4000/login", {
+    fetch("http://localhost:4000/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

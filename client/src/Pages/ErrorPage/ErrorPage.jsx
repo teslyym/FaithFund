@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer";
-import iml from "../../assets/iml.png";
-import caution from "../../assets/caution.png";
+import iml from "../../assets/iml.svg";
 import { Link } from "react-router-dom";
 import CustomButtons from "../../Components/buttons/CustomButtons";
 
