@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import bcrypt from 'bcrypt'
 
 const userscehma = mongoose.Schema({
     firstname: {
@@ -27,6 +28,15 @@ const userscehma = mongoose.Schema({
     },
 }, {
     timestamps: true
+});
+
+userscehma.methods.matchPassword = async function (enteredPassword) {
+    return await bcrypt.compare(enteredPassword, this.password);
+}
+
+userscehma.pre('save', async function(next) {
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
 });
 
 const Users = mongoose.model('Users', userscehma);
