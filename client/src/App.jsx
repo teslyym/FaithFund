@@ -12,6 +12,7 @@ import Confirmation from "./Components/Confirmation";
 import SuccessfulPayment from "./Components/SuccessfulPayment";
 import Profile from "./Pages/Profile/Profile";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import User from "./Components/User";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="SuccessfulPayment" element={<SuccessfulPayment />} />
           <Route path="Profile" element={<Profile />} />
           <Route path="Errorpage" element={<ErrorPage />} />
+          <Route path="User" element={<User />} />
         </Routes>
       </BrowserRouter>
     </>
