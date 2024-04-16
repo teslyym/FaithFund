@@ -42,8 +42,8 @@ const Contact = () => {
               Message
             </h1>
             <input
-              type="email"
-              placeholder="Enter Email Address"
+              type="text"
+              placeholder="Enter Message"
               className="flex border border-[#9DA39F] rounded-lg h-32 px-2 py-3 items-start w-full"
             />
           </div>
