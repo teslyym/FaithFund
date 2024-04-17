@@ -5,9 +5,33 @@ import logo from "../../Components/../assets/logo.png";
 import CustomButtonTwo from "../../Components/buttons/CustomButtonTwo";
 import { Link } from "react-router-dom";
 import CustomButtons from "../../Components/buttons/CustomButtons";
+import api from "../../../utils/api.js";
 
 const Register = () => {
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+    phoneNumber: "",
+    homeaddress: "",
+  });
+  const [errors, setErrors] = useState("");
+  const [loading, setLoading] = useState("false");
   const [showPassword, setShowPassword] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading("true");
+    try {
+      const response = await api.post("api/user", formData);
+      console.log(response);
+      setLoading("false");
+    } catch (error) {
+      setErrors(error.response.data);
+      setLoading("false");
+    }
+  };
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -93,7 +117,10 @@ const Register = () => {
             <h1 className="text-[14px]">OR</h1>
             <div className="border border-[#9DA39F] w-full"></div>
           </section>
-          <section className="w-[24rem] mb-[10px] flex flex-col gap-8">
+          <form
+            onSubmit={handleSubmit}
+            className="w-[24rem] mb-[10px] flex flex-col gap-8"
+          >
             <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 First Name
@@ -101,6 +128,11 @@ const Register = () => {
               <input
                 type="Enter First Name"
                 placeholder="Enter First Name"
+                value={formData.firstname}
+                onChange={(e) =>
+                  setFormData({ ...formData, firstname: e.target.value })
+                }
+                required
                 className="flex border border-[#9DA39F] rounded-lg  px-2 py-3 items-center  w-full"
               />
             </div>
@@ -111,6 +143,11 @@ const Register = () => {
               <input
                 type="Enter first Name"
                 placeholder="Enter Last Name"
+                value={formData.lastname}
+                onChange={(e) =>
+                  setFormData({ ...formData, lastname: e.target.value })
+                }
+                required
                 className="flex border border-[#9DA39F] rounded-lg  px-2 py-3 items-center  w-full"
               />
             </div>
@@ -121,6 +158,11 @@ const Register = () => {
               <input
                 type="email"
                 placeholder="Enter Email Address"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                required
                 className="flex border border-[#9DA39F] rounded-lg  px-2 py-3 items-center  w-full"
               />
             </div>
@@ -131,6 +173,11 @@ const Register = () => {
               <input
                 type="phone number"
                 placeholder="Enter Phone Number"
+                value={formData.phoneNumber}
+                onChange={(e) =>
+                  setFormData({ ...formData, phoneNumber: e.target.value })
+                }
+                required
                 className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center  w-full"
               />
             </div>
@@ -141,6 +188,11 @@ const Register = () => {
               <input
                 type="text"
                 placeholder="Enter Home Address (include your postal code)"
+                value={formData.homeaddress}
+                onChange={(e) =>
+                  setFormData({ ...formData, homeaddress: e.target.value })
+                }
+                required
                 className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center  w-full"
               />
             </div>
@@ -153,6 +205,11 @@ const Register = () => {
                   className="w-full outline-none"
                   type={showPassword ? "text" : "password"}
                   placeholder="Enter Password"
+                  value={formData.password}
+                  onChange={(e) =>
+                    setFormData({ ...formData, password: e.target.value })
+                  }
+                  required
                 />
                 <svg
                   onClick={toggleShowPassword}
@@ -173,11 +230,19 @@ const Register = () => {
               </p>
             </div>
             <div className="flex justify-center">
-              <Link to={"login"}>
-                <CustomButtons text={"Get Started"} button_width={"126px"} />
-              </Link>
+              {/* <Link to={"login"}> */}
+
+              <button type={"submit"}>
+                <CustomButtons
+                  text={"Get Started"}
+                  button_width={"126px"}
+                  disabled={loading}
+                />
+              </button>
+              {/* </Link> */}
             </div>
-          </section>
+          </form>
+          <p className="bg-[red]">{errors && error}</p>
           <div className="w-[22rem] mb-[10px] flex flex-col gap-8 text-base font-normal">
             <h1>
               By continuing, you agree to the{" "}

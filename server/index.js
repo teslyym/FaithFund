@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import connectdb from './db.js';
+import connectdb from './utils/db.js';
 import dotenv from "dotenv"
 import userRoutes from './routes/userRoutes.js'
 // import Users from "./Models/userModel";
@@ -19,6 +19,8 @@ app.use(express.json());
 app.get('/', (req, res) => {   
     res.send("api works"); 
 });
+
+app.use("/api/user", userRoutes)
 
 app.use("/user", userRoutes)
 app.listen(port, () => {
