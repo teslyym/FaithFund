@@ -28,7 +28,8 @@ const Register = () => {
       console.log(response);
       setLoading("false");
     } catch (error) {
-      setErrors(error.response.data);
+      console.log(error);
+      // setErrors(error.response.data);
       setLoading("false");
     }
   };
