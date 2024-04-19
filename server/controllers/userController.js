@@ -13,15 +13,13 @@ const registerUser = async (req, res) => {
     !password ||
     !homeaddress
   ) {
-    res.status(400).json({ message: "Please fill in all required fields" });
-    return;
+    return res.status(400).json({ message: "Please fill in all required fields" });
   }
 
   try {
     let user = await User.findOne({ email: email });
     if (user) {
-      res.status(400).send("User already exists");
-      return;
+      return res.status(400).send("User already exists");
     }
 
     const newUser = new User({
@@ -42,27 +40,26 @@ const registerUser = async (req, res) => {
 const authenticateUser = async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
-    res.status(400).json({ message: "Please fill in all required fields" });
+    return res.status(400).json({ message: "Please fill in all required fields" });
   }
   const user = await User.findOne({ email });
   console.log(user);
   if (!user) {
-    res.status(400).send({ message: "User does not exist" });
+    return res.status(400).send({ message: "User does not exist" });
   }
   const isMatch = await user.matchPassword(password);
   console.log(isMatch);
   if (!isMatch) {
-    res.status(400).send({ message: "Invalid password" });
+    return res.status(400).send({ message: "Invalid password" });
   }
   res.status(201).json({
     message: "User authenticated successfully",
     token: generateToken({
-      id: user._id,
-      email: user.email,
-      firstname: user.firstname,
-      lastName: user.lastName,
-      created: user.createdAt,
-      updated: user.updatedAt,
+      "id": user._id,
+      "email": user.email,
+      "firstname": user.firstname,
+      "lastName": user.lastName,
+      "created": user.createdAt,
     }),
   });
 };
