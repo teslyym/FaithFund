@@ -10,33 +10,27 @@ const mosquescehma = mongoose.Schema(
       type: String,
       required: true,
     },
-    imamId: {
-      type: String,
-      required: true,
-    },
+
     image: {
       type: String,
-      required: true,
     },
     description: {
       type: String,
       required: true,
     },
-    accountNumber:{
-            type:String,
-            required: true,
-        },
-    accountName:
-        {
-            type:String,
-            required: true,
-        },
-        bankName:
-        {
-            type:String,
-            required: true,
-        },
-    
+    accountNumber: {
+      type: String,
+      required: true,
+    },
+    accountName: {
+      type: String,
+      required: true,
+    },
+    bankName: {
+      type: String,
+      required: true,
+    },
+
     currentState: {
       type: String,
       required: true,

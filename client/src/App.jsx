@@ -14,6 +14,7 @@ import Profile from "./Pages/Profile/Profile";
 import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import User from "./Components/User";
 import MosqueDetails from "./Pages/MosqueDetails/MosqueDetails";
+import RegisterMosque from "./Pages/RegisterMosque/RegisterMosque";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="Errorpage" element={<ErrorPage />} />
           <Route path="User" element={<User />} />
           <Route path="MosqueDetails" element={<MosqueDetails />} />
+          <Route path="RegisterMosque" element={<RegisterMosque />} />
         </Routes>
       </BrowserRouter>
     </>
