@@ -52,12 +52,12 @@ const Header = () => {
         <div className=" bg-[#CCE3DE] w-[1px] h-10"></div>
         {
           hasToken? 
-          <div className="flex items-center gap-6">
+          <Link to={'/profile'} className="flex items-center gap-6">
             <div className="flex justify-center items-center gap-4 text-base font-medium">
         <img src={profile} alt="" />
         <h1>Mustapha M. O</h1>
       </div>
-          </div>:
+          </Link>:
 
          <div className="flex items-center gap-6">
          <Link to={"/register"} href="" className="hover:underline">
