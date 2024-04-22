@@ -9,11 +9,7 @@ import empower from "../../assets/empower.svg";
 import CustomButtons from "../../Components/buttons/CustomButtons";
 
 const Home = () => {
-  useEffect(() => {
-    fetch("http://localhost:4000/countries")
-      .then((res) => res.json())
-      .then((res) => console.log(res));
-  }, []);
+  
   return (
     <>
       <Header />

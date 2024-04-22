@@ -1,32 +1,34 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../Components/../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CustomButtonTwo from "../../Components/buttons/CustomButtonTwo";
 import CustomButtons from "../../Components/buttons/CustomButtons";
+import api from "../../../utils/api";
 
 const Login = () => {
+  const Navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  function handleSubmit(e) {
+  const [errors, setErrors] = useState("");
+  const [loading, setLoading] = useState("false");
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email);
-    console.log(password);
 
-    fetch("http://localhost:4000/user", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-    })
-      .then((res) => res.json())
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  }
+    setLoading("true");
+    try {
+      const response = await api.post("api/user/login", {email, password});
+      console.log(response);
+      localStorage.setItem("token", response.data.token);
+      Navigate("/")
+      
+    } catch (error) {
+      console.log(error);
+      // setErrors(error.response.data);
+      setLoading("false");
+    }
+  };
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -162,9 +164,9 @@ const Login = () => {
               </p>
             </div>
             <div className="flex justify-center">
-              <Link to={"/"}>
+              <button type="submit">
                 <CustomButtons text={"Login"} button_width={"74px"} />
-              </Link>
+              </button>
             </div>
           </section>
           <div className="w-[22rem] mb-[10px] flex flex-col gap-8 text-base font-normal">

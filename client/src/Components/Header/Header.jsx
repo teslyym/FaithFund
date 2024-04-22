@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import search from "../../assets/search.png";
 import CustomButtons from "../buttons/CustomButtons";
+import profile from "../../assets/profile.svg";
+// import jwt from 'jsonwebtoken';
+
+
 
 const Header = () => {
+  const [hasToken, setHasToken] = useState(false)
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+    // const decoded = jwt.verify(token, 'legend');
+    // console.log(decoded)
+      setHasToken(true)
+    } else {
+      setHasToken(false)
+    }
+  },[])
+
   return (
     <div
       id="header"
@@ -34,12 +50,24 @@ const Header = () => {
           </Link>
         </div>
         <div className=" bg-[#CCE3DE] w-[1px] h-10"></div>
-        <Link to={"/register"} href="" className="hover:underline">
+        {
+          hasToken? 
+          <div className="flex items-center gap-6">
+            <div className="flex justify-center items-center gap-4 text-base font-medium">
+        <img src={profile} alt="" />
+        <h1>Mustapha M. O</h1>
+      </div>
+          </div>:
+
+         <div className="flex items-center gap-6">
+         <Link to={"/register"} href="" className="hover:underline">
           Register
         </Link>
         <Link to={"/Login"}>
           <CustomButtons text="Login" button_width={"100px"} />
         </Link>
+        </div>
+        }
       </div>
     </div>
   );
