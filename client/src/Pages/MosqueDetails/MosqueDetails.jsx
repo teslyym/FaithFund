@@ -10,7 +10,7 @@ import CustomButtons from "../../Components/buttons/CustomButtons";
 
 const MosqueDetails = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header />
       <div className="pt-[8%] px-[7vw] ">
         <h3 className="w-[774px]">Ar-Rasheed Mosque, Yaba, Lagos</h3>

@@ -50,7 +50,7 @@ const addMosque = async (req, res) => {
 const getAllMosques = async (req, res) => {
   const mosques = await Mosques.find();
   console.log(mosques);
-  res.status(200).send(mosques);
+  res.status(200).json(mosques);
 };
 
 export { addMosque, getAllMosques };
