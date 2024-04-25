@@ -33,7 +33,7 @@ const Masajids = () => {
             key={index}
             title={Masajids.name}
             image={Masajids.image}
-            id={Masajids.id}
+            id={Masajids._id}
           />
         ))}
       </div>

@@ -19,6 +19,7 @@ const Register = () => {
   const [errors, setErrors] = useState("");
   const [loading, setLoading] = useState("false");
   const [showPassword, setShowPassword] = useState(false);
+  const [success, setsuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +28,7 @@ const Register = () => {
       const response = await api.post("api/user", formData);
       console.log(response);
       setLoading("false");
+      setsuccess(true);
     } catch (error) {
       console.log(error);
       // setErrors(error.response.data);
@@ -263,6 +265,16 @@ const Register = () => {
           </div>
         </div>
       </div>
+      {success && (
+        <div className="w-full h-screen bg-[rgba(0,0,0,0.4)] absolute  top-0 flex justify-center items-center">
+          <div className="p-20 bg-white flex flex-col justify-center items-center">
+            <h3>Registration successful</h3>
+            <Link to={"/login"} className="w-1/2">
+              <CustomButtonTwo>Login</CustomButtonTwo>
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

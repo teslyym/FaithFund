@@ -34,7 +34,7 @@ function App() {
           <Route path="Profile" element={<Profile />} />
           <Route path="Errorpage" element={<ErrorPage />} />
           <Route path="User" element={<User />} />
-          <Route path="MosqueDetails" element={<MosqueDetails />} />
+          <Route path="MosqueDetails/:id" element={<MosqueDetails />} />
           <Route path="RegisterMosque" element={<RegisterMosque />} />
         </Routes>
       </BrowserRouter>

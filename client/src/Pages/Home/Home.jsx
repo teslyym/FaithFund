@@ -7,12 +7,13 @@ import sajdah from "../../assets/sajdah.png";
 import Masajids from "../../Components/Masajids/Masajids";
 import empower from "../../assets/empower.svg";
 import CustomButtons from "../../Components/buttons/CustomButtons";
+import AddmosqueComponent from "../../Components/AddmosqueComponent";
 
 const Home = () => {
-  
   return (
     <>
       <Header />
+      <AddmosqueComponent />
       <div>
         <div className="relative">
           <img className="w-full" src={bgimg} alt="bgimg" />

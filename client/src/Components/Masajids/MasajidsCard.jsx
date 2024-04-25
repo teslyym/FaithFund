@@ -12,7 +12,7 @@ const MasajidsCard = ({
     <div className="">
       <img src={defImg} alt={title} />
       <p>{title}</p>
-      <Link to={`/mosque/${id}`}>
+      <Link to={`/MosqueDetails/${id}`}>
         <CustomButtons text={"Details"} button_width={"69px"} />
       </Link>
     </div>

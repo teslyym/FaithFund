@@ -53,4 +53,10 @@ const getAllMosques = async (req, res) => {
   res.status(200).json(mosques);
 };
 
-export { addMosque, getAllMosques };
+const getMosqueById = async (req, res) => {
+  const mosque = await Mosques.findById(req.params.id);
+  console.log(mosque);
+  res.status(200).json(mosque);
+};
+
+export { addMosque, getAllMosques, getMosqueById };

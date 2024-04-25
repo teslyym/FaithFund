@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import CustomButtons from "../../Components/buttons/CustomButtons";
 import CustomButtonTwo from "../../Components/buttons/CustomButtonTwo";
 import logo from "../../Components/../assets/logo.png";
@@ -19,6 +19,7 @@ const RegisterMosque = () => {
   const [errors, setErrors] = useState("");
   const [loading, setLoading] = useState("false");
   const [showPassword, setShowPassword] = useState(false);
+  const Navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,6 +37,13 @@ const RegisterMosque = () => {
       setLoading("false");
     }
   };
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      Navigate("/login");
+    }
+  }, []);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];

@@ -1,26 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header/Header";
 import buj from "../../assets/buj.svg";
 import img1 from "../../assets/img1.png";
 import img2 from "../../assets/img2.png";
 import img3 from "../../assets/img3.png";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import CustomButtons from "../../Components/buttons/CustomButtons";
+import api from "../../../utils/api";
 
 const MosqueDetails = () => {
+  const id = useParams().id;
+  const [details, setDetails] = useState();
+  const getDetails = async () => {
+    const response = await api.get(`/api/mosque/${id}`);
+    setDetails(response.data);
+    console.log(response);
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.title = "FaithFund | Mosque Details";
+    getDetails();
+  }, []);
   return (
     <div className="overflow-x-hidden">
       <Header />
       <div className="pt-[8%] px-[7vw] ">
-        <h3 className="w-[774px]">Ar-Rasheed Mosque, Yaba, Lagos</h3>
+        <h3 className="w-[774px]">{details && details.name}</h3>
         <h1 className="font-normal text-base pt-5 leading-6">
-          Welcome to the serene sanctuary of Ar-Rasheed Mosque, nestled in the
-          heart of Yaba, Lagos. With its awe-inspiring architecture and rich
-          historical significance, this sacred space has been a pillar of
-          spiritual enlightenment for the local Islamic community.
+          {details && details.description}
         </h1>
-        <h1 className="font-normal text-base pt-5 leading-6">
+        {/* <h1 className="font-normal text-base pt-5 leading-6">
           Established in the early 20th century, Ar-Rasheed Mosque stands as a
           testament to the enduring legacy of faith and devotion in Lagos. Its
           stunning blend of traditional Islamic design and modern elements
@@ -53,14 +63,15 @@ const MosqueDetails = () => {
           Together, we can illuminate the path of faith, compassion, and unity,
           ensuring Ar-Rasheed Mosque remains a beacon of hope and enlightenment
           for all.
-        </h1>
+        </h1> */}
       </div>
       <div>
         <img src={buj} alt="" />
       </div>
       <div className="pt-[2%] px-[7vw] ">
         <h3>Current State of the Masjid</h3>
-        <h1>
+        <h1>{details && details.currentState}</h1>
+        {/* <h1>
           Currently, Ar-Rasheed Mosque in Yaba, Lagos, bears the marks of its
           long-standing service to the community. While it continues to stand as
           a symbol of faith and unity, the passage of time has taken its toll on
@@ -77,7 +88,7 @@ const MosqueDetails = () => {
           comprehensive services and facilities the community deserves. Our
           restoration plan addresses these pressing needs with a detailed
           approach.
-        </h1>
+        </h1> */}
       </div>
       <div className="flex gap-5 overflow-x-scroll [&::-webkit-scrollbar]:hidden">
         <img src={img1} alt="" />

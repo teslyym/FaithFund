@@ -1,25 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import search from "../../assets/search.png";
 import CustomButtons from "../buttons/CustomButtons";
 import profile from "../../assets/profile.svg";
+import { jwtDecode } from "jwt-decode";
 // import jwt from 'jsonwebtoken';
 
-
-
 const Header = () => {
-  const [hasToken, setHasToken] = useState(false)
+  const [dropDown, setDropDown] = useState(false);
+  const [decoded, setDecoded] = useState(false);
+  const Navigate = useNavigate();
   useEffect(() => {
-    const token = localStorage.getItem('token')
+    const token = localStorage.getItem("token");
     if (token) {
-    // const decoded = jwt.verify(token, 'legend');
-    // console.log(decoded)
-      setHasToken(true)
-    } else {
-      setHasToken(false)
+      setDecoded(jwtDecode(token));
     }
-  },[])
+  }, []);
+  console.log(decoded);
+  const toggleDropdown = () => {
+    setDropDown(!dropDown);
+  };
+  const logout = () => {
+    localStorage.removeItem("token");
+    Navigate("/");
+  };
 
   return (
     <div
@@ -50,24 +55,42 @@ const Header = () => {
           </Link>
         </div>
         <div className=" bg-[#CCE3DE] w-[1px] h-10"></div>
-        {
-          hasToken? 
-          <Link to={'/profile'} className="flex items-center gap-6">
-            <div className="flex justify-center items-center gap-4 text-base font-medium">
-        <img src={profile} alt="" />
-        <h1>Mustapha M. O</h1>
-      </div>
-          </Link>:
-
-         <div className="flex items-center gap-6">
-         <Link to={"/register"} href="" className="hover:underline">
-          Register
-        </Link>
-        <Link to={"/Login"}>
-          <CustomButtons text="Login" button_width={"100px"} />
-        </Link>
-        </div>
-        }
+        {decoded ? (
+          <div to={"/profile"} className="flex relative items-center gap-6">
+            <div
+              onClick={toggleDropdown}
+              className="flex justify-center items-center gap-4 text-base font-medium"
+            >
+              <img src={profile} alt="" />
+              <h1>{decoded.id.firstname}</h1>
+            </div>
+            {dropDown && (
+              <div className="absolute top-[130%]">
+                <p
+                  onClick={() => {
+                    toggleDropdown();
+                    Navigate("/profile");
+                  }}
+                  className="hover:underline"
+                >
+                  Profile
+                </p>
+                <p onClick={logout} className="hover:underline">
+                  Logout
+                </p>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="flex items-center gap-6">
+            <Link to={"/register"} href="" className="hover:underline">
+              Register
+            </Link>
+            <Link to={"/Login"}>
+              <CustomButtons text="Login" button_width={"100px"} />
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
