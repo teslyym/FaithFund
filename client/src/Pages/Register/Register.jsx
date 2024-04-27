@@ -269,8 +269,8 @@ const Register = () => {
         <div className="w-full h-screen bg-[rgba(0,0,0,0.4)] absolute  top-0 flex justify-center items-center">
           <div className="p-20 bg-white flex flex-col justify-center items-center">
             <h3>Registration successful</h3>
-            <Link to={"/login"} className="w-1/2">
-              <CustomButtonTwo>Login</CustomButtonTwo>
+            <Link to={"/Login"}>
+              <CustomButtons text="Login" button_width={"100px"} />
             </Link>
           </div>
         </div>
