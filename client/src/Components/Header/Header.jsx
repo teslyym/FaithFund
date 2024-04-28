@@ -65,19 +65,22 @@ const Header = () => {
               <h1>{decoded.id.firstname}</h1>
             </div>
             {dropDown && (
-              <div className="absolute top-[130%]">
-                <p
-                  onClick={() => {
-                    toggleDropdown();
-                    Navigate("/profile");
-                  }}
-                  className="hover:underline"
-                >
-                  Profile
-                </p>
-                <p onClick={logout} className="hover:underline">
-                  Logout
-                </p>
+              <div>
+                <div className="absolute top-[130%] bg-[#017358] rounded border cursor-pointer">
+                  <p
+                    className=""
+                    onClick={() => {
+                      toggleDropdown();
+                      Navigate("/profile");
+                    }}
+                    className="hover:underline"
+                  >
+                    Profile
+                  </p>
+                  <p onClick={logout} className="hover:underline">
+                    Logout
+                  </p>
+                </div>
               </div>
             )}
           </div>
