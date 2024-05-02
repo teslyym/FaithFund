@@ -13,7 +13,6 @@ connectdb();
 app.use(
   cors({
     origin: ["http://localhost:5173", "https://faith-fund.vercel.app/"],
-    credentials: true,
   })
 );
 
