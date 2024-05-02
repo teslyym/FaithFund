@@ -11,7 +11,7 @@ const MasajidsCard = ({
   return (
     <div className="">
       <img src={defImg} alt={title} />
-      <p>{title}</p>
+      <p className=" line-clamp-1">{title}</p>
       <Link to={`/MosqueDetails/${id}`}>
         <CustomButtons text={"Details"} button_width={"69px"} />
       </Link>

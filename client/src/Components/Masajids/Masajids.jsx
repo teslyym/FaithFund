@@ -2,6 +2,7 @@ import React from "react";
 import MasajidsCard from "./MasajidsCard";
 import data from "./data";
 import axios from "axios";
+import api from "../../../utils/api";
 
 const Masajids = () => {
   const [mosques, setMosques] = React.useState([]);
@@ -9,7 +10,7 @@ const Masajids = () => {
   const getAllMasajids = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get("http://localhost:4000/api/mosque");
+      const response = await api.get("api/mosque");
       console.log(response);
       setMosques(response.data);
     } catch (error) {

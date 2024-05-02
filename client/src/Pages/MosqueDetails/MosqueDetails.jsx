@@ -25,7 +25,7 @@ const MosqueDetails = () => {
   return (
     <div className="overflow-x-hidden">
       <Header />
-      <div className="pt-[8%] px-[7vw] ">
+      <div className="py-[8%] px-[7vw] ">
         <h3 className="w-[774px]">{details && details.name}</h3>
         <h1 className="font-normal text-base pt-5 leading-6">
           {details && details.description}
