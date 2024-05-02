@@ -74,7 +74,7 @@ const Home = () => {
         </div>
         <div className="p-20 pt-10">
           <h3>Masajids (mosques) in need of donations</h3>
-          <Masajids />
+          <Masajids page={"home"} />
           <Link to={"/MoreMasjids"} className="pt-[10%] flex justify-center">
             <CustomButtons text={"View More Masajid"} button_width={"181px"} />
           </Link>

@@ -4,7 +4,7 @@ import data from "./data";
 import axios from "axios";
 import api from "../../../utils/api";
 
-const Masajids = () => {
+const Masajids = ({ page }) => {
   const [mosques, setMosques] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
   const getAllMasajids = async () => {
@@ -31,14 +31,25 @@ const Masajids = () => {
   return (
     <div>
       <div className="grid grid-cols-4 gap-6">
-        {mosques.map((Masajids, index) => (
-          <MasajidsCard
-            key={index}
-            title={Masajids.name}
-            image={Masajids.image}
-            id={Masajids._id}
-          />
-        ))}
+        {page === "home"
+          ? mosques
+              .slice(0, 4)
+              .map((Masajids, index) => (
+                <MasajidsCard
+                  key={index}
+                  title={Masajids.name}
+                  image={Masajids.image}
+                  id={Masajids._id}
+                />
+              ))
+          : mosques.map((Masajids, index) => (
+              <MasajidsCard
+                key={index}
+                title={Masajids.name}
+                image={Masajids.image}
+                id={Masajids._id}
+              />
+            ))}
       </div>
     </div>
   );
