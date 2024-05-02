@@ -10,11 +10,7 @@ dotenv.config();
 const port = process.env.PORT || 5001;
 connectdb();
 
-app.use(
-  cors({
-    origin: ["http://localhost:5173", "https://faith-fund.vercel.app/"],
-  })
-);
+app.use(cors());
 
 app.use(express.json());
 app.get("/", (req, res) => {
