@@ -10,7 +10,9 @@ const Masajids = () => {
   const getAllMasajids = async () => {
     setIsLoading(true);
     try {
-      const response = await api.get("api/mosque");
+      const response = await axios.get(
+        "https://faithfund-beta.onrender.com/api/mosque"
+      );
       console.log(response);
       setMosques(response.data);
     } catch (error) {
