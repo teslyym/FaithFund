@@ -15,6 +15,7 @@ import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 import User from "./Components/User";
 import MosqueDetails from "./Pages/MosqueDetails/MosqueDetails";
 import RegisterMosque from "./Pages/RegisterMosque/RegisterMosque";
+import MoreMasjids from "./Pages/MoreMasjids/MoreMasjids";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="User" element={<User />} />
           <Route path="MosqueDetails/:id" element={<MosqueDetails />} />
           <Route path="RegisterMosque" element={<RegisterMosque />} />
+          <Route path="MoreMasjids" element={<MoreMasjids />} />
         </Routes>
       </BrowserRouter>
     </>

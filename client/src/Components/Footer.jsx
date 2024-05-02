@@ -30,39 +30,44 @@ const Footer = () => {
               Interested in knowing how the donations are being used, subscribe
               to our newsletter. You also gain access to exclusive content,
               updates, and valuable insights. Here's why it's worth becoming
-              part of our newsletter community: <br /><span className="text-[#E4F6F2]">.</span> <span>1.</span> Stay
+              part of our newsletter community: <br />
+              <span className="text-[#E4F6F2]">.</span> <span>1.</span> Stay
               Informed: Receive regular updates on the progress of mosque
               restoration projects, success stories, and the impact of your
               generous contributions. You'll be the first to know about new
               initiatives, upcoming events, and opportunities to get involved.{" "}
-              <br /><span className="text-[#E4F6F2]">.</span> <span>2.</span> Inspiring Stories: Discover heartwarming
-              success stories of restored mosques and the positive
-              transformations they bring to communities. Experience the joy of
-              witnessing lives being touched and the spirit of unity fostered
-              through mosque revitalization. <br /> <span className="text-[#E4F6F2]">.</span><span>3.</span> Valuable
-              Insights: Gain unique insights into the significance of mosques in
-              Islamic communities, their historical and cultural importance, and
-              the spiritual nourishment they provide. Deepen your understanding
-              of our shared heritage and the power of faith. <br />
-              <span className="text-[#E4F6F2]">.</span>4. Community Engagement: Be part of a vibrant
-              community that shares a common passion for mosque restoration and
-              community development. Connect with like-minded individuals,
-              volunteers, and organizations who are dedicated to making a
-              positive difference. <br /> <span className="text-[#E4F6F2]">.</span> <span>5.</span> Inspire Others: Your
-              involvement in our newsletter community helps inspire others to
-              join the cause, spreading awareness and encouraging greater
-              support for mosque restoration. Together, we can create a powerful
-              ripple effect of change and unity. <br/>Subscribe now to experience the
-              full benefits of our newsletter community. Join us in restoring
-              mosques, revitalizing communities, and forging a future of faith,
-              compassion, and unity.
+              <br />
+              <span className="text-[#E4F6F2]">.</span> <span>2.</span>{" "}
+              Inspiring Stories: Discover heartwarming success stories of
+              restored mosques and the positive transformations they bring to
+              communities. Experience the joy of witnessing lives being touched
+              and the spirit of unity fostered through mosque revitalization.{" "}
+              <br /> <span className="text-[#E4F6F2]">.</span>
+              <span>3.</span> Valuable Insights: Gain unique insights into the
+              significance of mosques in Islamic communities, their historical
+              and cultural importance, and the spiritual nourishment they
+              provide. Deepen your understanding of our shared heritage and the
+              power of faith. <br />
+              <span className="text-[#E4F6F2]">.</span>4. Community Engagement:
+              Be part of a vibrant community that shares a common passion for
+              mosque restoration and community development. Connect with
+              like-minded individuals, volunteers, and organizations who are
+              dedicated to making a positive difference. <br />{" "}
+              <span className="text-[#E4F6F2]">.</span> <span>5.</span> Inspire
+              Others: Your involvement in our newsletter community helps inspire
+              others to join the cause, spreading awareness and encouraging
+              greater support for mosque restoration. Together, we can create a
+              powerful ripple effect of change and unity. <br />
+              Subscribe now to experience the full benefits of our newsletter
+              community. Join us in restoring mosques, revitalizing communities,
+              and forging a future of faith, compassion, and unity.
             </h1>
           </div>
         </div>
       </div>
-      <div className="flex justify-center py-20 items-center px-[10vw] gap-8 text-center content-center bg-[#017358] text-white img">
+      <div className="flex justify-center py-20 items-center px-[10vw] gap-[2%] text-center content-center bg-[#017358] text-white img">
         <div>
-          <h1>@ IBM, 2023. All rights reserved</h1>
+          <h1>© IBM, 2023. All rights reserved</h1>
         </div>
 
         <div className="gap-4">
