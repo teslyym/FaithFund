@@ -6,8 +6,8 @@ import userRoutes from "./routes/userRoutes.js";
 import mosqueRoutes from "./routes/mosqueRoutes.js";
 // import Users from "./Models/userModel";
 const app = express();
-const port = 4000;
 dotenv.config();
+const port = process.env.PORT || 5001;
 connectdb();
 
 app.use(
