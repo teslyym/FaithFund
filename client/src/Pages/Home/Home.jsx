@@ -30,7 +30,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between items-center p-20 gap-3">
+        <div className="flex justify-between items-center flex-col sm:flex-row p-20 gap-3">
           <div className="w-[60%] gap-6">
             <h3>Restore Mosques, Restore Communities: Join the Movement</h3>
             <h1 className="font-normal text-xs leading-6">

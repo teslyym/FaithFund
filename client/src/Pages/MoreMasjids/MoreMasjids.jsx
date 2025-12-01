@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer";
 import { Link } from "react-router-dom";
-import CustomButtons from "../../Components/buttons/CustomButtons";
 import Masajids from "../../Components/Masajids/Masajids";
 
 const MoreMasjids = () => {
