@@ -265,9 +265,9 @@ const Register = () => {
             </h1>
             <h1>
               Already have an account,{" "}
-              <span className="text-[#017358]">
-                <button>Login</button>
-              </span>
+              <Link to="/Login">
+                <span className="text-[#017358]">Login here</span>
+              </Link>
             </h1>
           </div>
         </div>

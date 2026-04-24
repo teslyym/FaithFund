@@ -105,8 +105,19 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter Password"
               />
-              <svg onClick={toggleShowPassword} className="cursor-pointer">
-                <path d="M12 17.5C11.4696 17.5 10.9609 17.2893 10.5858 16.9142..." />
+              <svg
+                onClick={toggleShowPassword}
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="cursor-pointer"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Zm0 12.5a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"
+                  fill="#9DA39F"
+                />
               </svg>
             </div>
 
@@ -117,7 +128,9 @@ const Login = () => {
 
           <div className="text-center pb-6">
             Don’t have an account?{" "}
-            <span className="text-[#017358]">Register here</span>
+            <Link to="/Register">
+              <span className="text-[#017358]">Register here</span>
+            </Link>
           </div>
         </div>
       </form>
