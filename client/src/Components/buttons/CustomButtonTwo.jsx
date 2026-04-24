@@ -7,14 +7,14 @@ const CustomButtonTwo = ({ icon, text, button_width, handleClick }) => {
       style={{
         width: button_width,
       }}
-      class="button--two"
+      className="button--two"
       onClick={handleClick}
     >
-      <div class="button--two--wrapper">
-        <div class="text--two">
+      <div className="button--two--wrapper">
+        <div className="text--two">
           {icon} {text}
         </div>
-        <span class="icon--two">
+        <span className="icon--two">
           {icon} {text}
         </span>
       </div>
