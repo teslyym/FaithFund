@@ -11,7 +11,7 @@ const Masajids = ({ page }) => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        "https://faithfund-beta.onrender.com/api/mosque"
+        "https://faithfund-beta.onrender.com/api/mosque",
       );
       console.log(response);
       setMosques(response.data);
@@ -30,7 +30,8 @@ const Masajids = ({ page }) => {
   }
   return (
     <div>
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {" "}
         {page === "home"
           ? mosques
               .slice(0, 4)
