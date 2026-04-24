@@ -5,14 +5,18 @@ import CustomButtonTwo from "./buttons/CustomButtonTwo";
 const Confirmation = ({ setDonationSteps }) => {
   return (
     <div>
-      <div className="w-full h-screen flex flex-col justify-center pt-5 pr-6 pb-5 pl-6 top-[220px] items-center flex-wrap">
-        <h1 className="">Confirm Payment</h1>
-        <div className="flex gap-2 pt-3 justify-center">
+      <div className="w-full min-h-screen flex flex-col justify-center items-center px-4 sm:px-6">
+        <h1 className="text-lg sm:text-xl md:text-2xl font-semibold text-center">
+          Confirm Payment
+        </h1>
+
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 justify-center items-center">
           <CustomButtons
             handleClick={() => setDonationSteps("success-payment")}
             text={"Yes"}
             button_width={"79px"}
           />
+
           <CustomButtonTwo
             handleClick={() => {
               console.log("hello");
