@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer";
 import logo from "../../Components/../assets/logo.png";
 import CustomButtonTwo from "../../Components/buttons/CustomButtonTwo";
 import { Link } from "react-router-dom";
@@ -31,7 +29,6 @@ const Register = () => {
       setsuccess(true);
     } catch (error) {
       console.log(error);
-      // setErrors(error.response.data);
       setLoading("false");
     }
   };
@@ -46,16 +43,18 @@ const Register = () => {
         <div className="items-start">
           <Link to={"/"}>
             <img
-              className="w-[94px] h-[80px] ml-[10%] mt-10"
+              className="w-[74px] h-[64px] sm:w-[94px] sm:h-[80px] ml-4 sm:ml-[10%] mt-6 sm:mt-10"
               src={logo}
               alt=""
             />
           </Link>
         </div>
-        <div className="rounded-lg flex flex-col border w-[32%] mx-auto mb-10 items-center gap-6 shadow-[2px_2px_10px_2px_rgba(0,0,0,0.2)]">
-          <div className="text-[2.125rem] w-full  text-center font-medium pt-4">
+
+        <div className="rounded-lg flex flex-col border w-[92%] sm:w-[70%] md:w-[55%] lg:w-[32%] mx-auto mb-10 items-center gap-6 shadow-[2px_2px_10px_2px_rgba(0,0,0,0.2)] px-4">
+          <div className="text-2xl sm:text-[2.125rem] w-full text-center font-medium pt-4">
             <p>Register An Account</p>
           </div>
+
           <div>
             <div className="flex w-[249px] h-11 mb-[24px]">
               <div className="items-center justify-center w-full">
@@ -91,6 +90,7 @@ const Register = () => {
                 </Link>
               </div>
             </div>
+
             <div className="flex w-[249px] h-11">
               <div className="items-center justify-center w-full">
                 <Link>
@@ -115,46 +115,50 @@ const Register = () => {
               </div>
             </div>
           </div>
+
           <section className="flex items-center w-full max-w-[250px] gap-2">
             <div className="border border-[#9DA39F] w-full"></div>
             <h1 className="text-[14px]">OR</h1>
             <div className="border border-[#9DA39F] w-full"></div>
           </section>
+
           <form
             onSubmit={handleSubmit}
-            className="w-[24rem] mb-[10px] flex flex-col gap-8"
+            className="w-full max-w-[24rem] mb-[10px] flex flex-col gap-8"
           >
-            <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
+            <div className="bg-white w-full outline-none focus:border-black valid:border-[#017358]">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 First Name
               </h1>
               <input
-                type="Enter First Name"
+                type="text"
                 placeholder="Enter First Name"
                 value={formData.firstname}
                 onChange={(e) =>
                   setFormData({ ...formData, firstname: e.target.value })
                 }
                 required
-                className="flex border border-[#9DA39F] rounded-lg  px-2 py-3 items-center  w-full"
+                className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center w-full outline-none"
               />
             </div>
-            <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
+
+            <div className="bg-white w-full outline-none focus:border-black valid:border-[#017358]">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 Last Name
               </h1>
               <input
-                type="Enter first Name"
+                type="text"
                 placeholder="Enter Last Name"
                 value={formData.lastname}
                 onChange={(e) =>
                   setFormData({ ...formData, lastname: e.target.value })
                 }
                 required
-                className="flex border border-[#9DA39F] rounded-lg  px-2 py-3 items-center  w-full"
+                className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center w-full outline-none"
               />
             </div>
-            <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
+
+            <div className="bg-white w-full outline-none focus:border-black valid:border-[#017358]">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 Email Address
               </h1>
@@ -166,25 +170,27 @@ const Register = () => {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 required
-                className="flex border border-[#9DA39F] rounded-lg  px-2 py-3 items-center  w-full"
+                className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center w-full outline-none"
               />
             </div>
-            <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
+
+            <div className="bg-white w-full outline-none focus:border-black valid:border-[#017358]">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 Phone Number (include your country code)
               </h1>
               <input
-                type="phone number"
+                type="text"
                 placeholder="Enter Phone Number"
                 value={formData.phoneNumber}
                 onChange={(e) =>
                   setFormData({ ...formData, phoneNumber: e.target.value })
                 }
                 required
-                className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center  w-full"
+                className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center w-full outline-none"
               />
             </div>
-            <div className="bg-white w-full pl-4 outline-none focus:border-black valid:border-[#017358]">
+
+            <div className="bg-white w-full outline-none focus:border-black valid:border-[#017358]">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 Home Address (include your postal code)
               </h1>
@@ -196,14 +202,15 @@ const Register = () => {
                   setFormData({ ...formData, homeaddress: e.target.value })
                 }
                 required
-                className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center  w-full"
+                className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center w-full outline-none"
               />
             </div>
-            <div className="bg-white w-full pl-4 outline-none">
+
+            <div className="bg-white w-full outline-none">
               <h1 className="text-left pb-3 text-[#001712] text-sm font-medium">
                 Password (minimum of 8 characters)
               </h1>
-              <div className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center  w-full justify-between focus-within:border-black valid:border-[#017358]">
+              <div className="flex border border-[#9DA39F] rounded-lg px-2 py-3 items-center w-full justify-between focus-within:border-black valid:border-[#017358]">
                 <input
                   className="w-full outline-none"
                   type={showPassword ? "text" : "password"}
@@ -221,6 +228,7 @@ const Register = () => {
                   viewBox="0 0 24 25"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="cursor-pointer shrink-0"
                 >
                   <path
                     d="M12 17.5C11.4696 17.5 10.9609 17.2893 10.5858 16.9142C10.2107 16.5391 10 16.0304 10 15.5C10 14.39 10.89 13.5 12 13.5C12.5304 13.5 13.0391 13.7107 13.4142 14.0858C13.7893 14.4609 14 14.9696 14 15.5C14 16.0304 13.7893 16.5391 13.4142 16.9142C13.0391 17.2893 12.5304 17.5 12 17.5ZM18 20.5V10.5H6V20.5H18ZM18 8.5C18.5304 8.5 19.0391 8.71071 19.4142 9.08579C19.7893 9.46086 20 9.96957 20 10.5V20.5C20 21.0304 19.7893 21.5391 19.4142 21.9142C19.0391 22.2893 18.5304 22.5 18 22.5H6C5.46957 22.5 4.96086 22.2893 4.58579 21.9142C4.21071 21.5391 4 21.0304 4 20.5V10.5C4 9.39 4.89 8.5 6 8.5H7V6.5C7 5.17392 7.52678 3.90215 8.46447 2.96447C9.40215 2.02678 10.6739 1.5 12 1.5C12.6566 1.5 13.3068 1.62933 13.9134 1.8806C14.52 2.13188 15.0712 2.50017 15.5355 2.96447C15.9998 3.42876 16.3681 3.97995 16.6194 4.58658C16.8707 5.19321 17 5.84339 17 6.5V8.5H18ZM12 3.5C11.2044 3.5 10.4413 3.81607 9.87868 4.37868C9.31607 4.94129 9 5.70435 9 6.5V8.5H15V6.5C15 5.70435 14.6839 4.94129 14.1213 4.37868C13.5587 3.81607 12.7956 3.5 12 3.5Z"
@@ -232,21 +240,21 @@ const Register = () => {
                 (Use alphabets, numbers and characters)
               </p>
             </div>
-            <div className="flex justify-center">
-              {/* <Link to={"login"}> */}
 
-              <button type={"submit"}>
+            <div className="flex justify-center">
+              <button type="submit">
                 <CustomButtons
                   text={"Get Started"}
                   button_width={"126px"}
                   disabled={loading}
                 />
               </button>
-              {/* </Link> */}
             </div>
           </form>
-          <p className="bg-[red]">{errors && error}</p>
-          <div className="w-[22rem] mb-[10px] flex flex-col gap-8 text-base font-normal">
+
+          <p className="bg-[red]">{errors && errors}</p>
+
+          <div className="w-full max-w-[22rem] mb-[10px] flex flex-col gap-6 text-base font-normal text-center">
             <h1>
               By continuing, you agree to the{" "}
               <button>
@@ -258,16 +266,16 @@ const Register = () => {
             <h1>
               Already have an account,{" "}
               <span className="text-[#017358]">
-                {" "}
                 <button>Login</button>
               </span>
             </h1>
           </div>
         </div>
       </div>
+
       {success && (
-        <div className="w-full h-screen bg-[rgba(0,0,0,0.4)] absolute  top-0 flex justify-center items-center">
-          <div className="p-20 bg-white flex flex-col justify-center items-center">
+        <div className="w-full min-h-screen bg-[rgba(0,0,0,0.4)] fixed top-0 left-0 flex justify-center items-center px-4 z-50">
+          <div className="w-full max-w-sm p-8 sm:p-12 bg-white flex flex-col justify-center items-center rounded-lg text-center">
             <h3>Registration successful</h3>
             <Link to={"/Login"}>
               <CustomButtons text="Login" button_width={"100px"} />
