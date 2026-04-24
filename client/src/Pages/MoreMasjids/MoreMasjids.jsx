@@ -1,23 +1,22 @@
 import React from "react";
 import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer";
-import { Link } from "react-router-dom";
 import Masajids from "../../Components/Masajids/Masajids";
 
 const MoreMasjids = () => {
   return (
     <div>
-      <div>
-        <Header />
-        <div className="p-20 pt-[10%]">
-          <h3>Masajids (mosques) in need of donations</h3>
-          <Masajids />
-          {/* <Link className="pt-[10%] flex justify-center">
-            <CustomButtons text={"View More Masajid"} button_width={"181px"} />
-          </Link> */}
-        </div>
-        <Footer />
+      <Header />
+
+      <div className="px-4 sm:px-8 lg:px-20 pt-24 lg:pt-[10%] pb-10">
+        <h3 className="text-2xl sm:text-3xl font-semibold mb-6">
+          Masajids (mosques) in need of donations
+        </h3>
+
+        <Masajids />
       </div>
+
+      <Footer />
     </div>
   );
 };
